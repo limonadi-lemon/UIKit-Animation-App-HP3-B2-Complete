@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eraser.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rO6-Zu-BXx" userLabel="imgGoodnight">
+                                <rect key="frame" x="0.0" y="159.66666666666666" width="430" height="428.66666666666674"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rO6-Zu-BXx" secondAttribute="height" multiplier="1:1" id="aoU-4p-sxE"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hOE-qx-KMS">
+                                <rect key="frame" x="11" y="629" width="408" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcj-0k-ILB" userLabel="btnToggleAnimation">
+                                        <rect key="frame" x="0.0" y="0.0" width="194" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Animate"/>
+                                        <connections>
+                                            <action selector="changeToNextImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vwX-iG-e7n"/>
+                                            <action selector="toggleAnimating:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ITu-pw-LqY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKz-ae-e5p" userLabel="btnClick">
+                                        <rect key="frame" x="214" y="0.0" width="194" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Next Image"/>
+                                        <connections>
+                                            <action selector="changeToNextImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g1A-cs-rl6"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="j3v-Q8-pQl" userLabel="btnResetAnimation">
+                                        <rect key="frame" x="408" y="0.0" width="0.0" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Reset">
+                                            <color key="baseBackgroundColor" red="0.68649323449999999" green="0.31418954090000001" blue="0.25406224849999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="changeToNextImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XuF-r1-bRv"/>
+                                            <action selector="resetAnimation" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9s-CE-jdC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.1411764771" green="0.1686274707" blue="0.21568629149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="hOE-qx-KMS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="45v-DE-fWU"/>
+                            <constraint firstItem="rO6-Zu-BXx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="64Y-LJ-b4o"/>
+                            <constraint firstItem="hOE-qx-KMS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.948837" id="APy-eo-E9C"/>
+                            <constraint firstItem="hOE-qx-KMS" firstAttribute="top" secondItem="rO6-Zu-BXx" secondAttribute="bottom" constant="40" id="Mkj-xI-HEN"/>
+                            <constraint firstItem="rO6-Zu-BXx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NdZ-P0-rah"/>
+                            <constraint firstItem="rO6-Zu-BXx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="dqj-X2-B1Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnResetAnimation" destination="j3v-Q8-pQl" id="v81-vu-gWf"/>
+                        <outlet property="btnToggleAnimation" destination="gcj-0k-ILB" id="QFZ-p0-Z43"/>
+                        <outlet property="imgGoodnight" destination="rO6-Zu-BXx" id="kQ9-oa-tLN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.093023255813954" y="3.218884120171674"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eraser.fill" catalog="system" width="128" height="119"/>
+    </resources>
+</document>
